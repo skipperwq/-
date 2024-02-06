@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор интернет-цитат</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="main__title">Генератор интернет-цитат</h1>
+        <div class="main__img-wrap">
+            <img src="images/1.png" id="image" class="main__img show">
+        </div>
+        <div class="main__quote-wrap">
+            <p id="quote" class="main__quote show">Кто рано встает, тот потом пожалеет о своем решении.</p>
+        </div>
+        
+        <button class="main__button" onclick="main()">Сгенерировать цитату</button>
+    </div>
+
+    <script>
+        let s = document.getElementById('quote')
+        let o =[
+            'кто живёт тот','кто спит тот','какой человек такой ,и','если ты собака то',
+            'иногда когда а','если спать то'
+        ]
+        let t =[
+            'уйдёт','умрёт','зарейдит','человек','лай','иногда'
+        ]
+
+        function main (){
+           let l = o[Math.floor(Math.random() * o.length)]
+           let k = t[Math.floor(Math.random() * t.length)]
+            console.log(l + ' ' + k)
+            s.textContent = l+' '+k
+        }
+    </script>
+</body>
+
+</html>
